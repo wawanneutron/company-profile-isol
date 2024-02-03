@@ -1,0 +1,123 @@
+{
+  "landing": {
+    "hero-title": "Kami menyediakan layanan dengan nilai",
+    "hero-subtitle": "Kami akan dengan senang hati membantu Anda sesuai dengan kebutuhan anda. Dengan keahlian kami, bisnis anda dapat tumbuh dan meningkatkan lebih cepat.",
+    "about-title": "Tentang Kami",
+    "about-subtitle": "Didirikan pada September 2019, kami memulai bisnis kami dengan pasokan tenaga kerja dan mengelola layanan. Sekarang kami fokus pada infrastruktur jaringan dengan lebih dari 1.500 proyek dan berusaha untuk memberikan layanan terbaik kepada klien kami termasuk perakitan CPE dengan lebih dari 75.000 unit dan mengelola layanan di pusat kontak dan penjualan.",
+    "service-header-title": "Pelayanan Kami",
+    "service-focus-title": "Apa yang kami fokuskan?",
+    "service-title": [
+      "Network Infrastructures",
+      "Manage Services",
+      "Assembly Factory",
+      "Other Services"
+    ],
+    "service-about": [
+      "I-Solution menyediakan solusi ujung ke ujung dalam industri telekomunikasi untuk mengembangkan infrastruktur jaringan Anda.",
+
+      "Kami dapat menyediakan berbagai layanan mengelola seperti pusat kontak termasuk tenaga kerja, tempat, workstation, dan aplikasi untuk mendukung bisnis Anda.",
+
+      "Kami menawarkan berbagai produk dan layanan yang komprehensif untuk memenuhi kebutuhan telekomunikasi & multimedia.",
+
+      "Dengan keahlian kami dalam infrastruktur jaringan, kami dapat menyediakan bahan dan peralatan jaringan:"
+    ],
+    "service-desc": [
+      "Jaringan Fiber Optic (FTTX) dengan berbagai layanan termasuk teknik & konstruksi (peluncuran baru), pemeliharaan & perbaikan jaringan, dan home connect (unit perumahan dan multi -hunian).",
+
+      "Pusat Kontak, Tele-Sales, Penjualan Langsung, Teknologi Informasi, dan Fungsi Kunci Lainnya.",
+
+      "Peralatan Premis Pelanggan (CPE) Set Top Box (STB) seperti itu, modem kabel, terminal jaringan optik (ONT).",
+
+      "Tiang FTTX, Bahan Pasif, Jaringan Distribusi Optik (ODN)."
+    ],
+
+    "location-header-title": "Lokasi Kami",
+    "location-alert-map": "Klik lokasi pin untuk menampilkan detail lokasi",
+    "gallery-header-title": "Galeri",
+    "tagline-quote": "Solusi Inovatif Untuk Bisnis Anda"
+  },
+
+  "about": {
+    "profile-hero-title": "Visi, Misi, dan Nilai Perusahaan",
+    "profile-hero-subtitle": "Kami akan dengan senang hati membantu Anda sesuai dengan kebutuhan Anda.Dengan keahlian kami, bisnis Anda dapat tumbuh dan meningkatkan lebih cepat.",
+    "profile-visi-misi-title-header": "Visi dan Misi",
+    "profile-vision-title": "Visi Kami",
+    "profile-vision-desc": "Penyedia Layanan Kelola Terbaik",
+    "profile-mision-title": "Misi Kita",
+    "profile-mision-desc": "Bermitra dengan klien untuk mencapai visi mereka",
+    "profile-company-title-header": "Proposisi Perusahaan",
+    "profile-company-title": [
+      "Ketenangan pikiran",
+      "Mitra tepercaya",
+      "Mencapai impian dan pekerjaan Anda",
+      "Terus membaik"
+    ],
+    "profile-company-desc": [
+      "Karyawan/Layanan kami akan melakukan hal yang benar langsung dari hari pertama",
+      "Menghormati dan Menghormati aturan, dan peraturan dengan pola pikir integritas",
+      "Pertumbuhan dan selalu mendukung bisnis pelanggan",
+      "Selalu temukan cara yang lebih baik untuk memberikan dan mencapai hasilnya"
+    ],
+    "management-hero-title": "Manajemen I-Solution",
+    "management-hero-subtitle": "Komisaris dan Direksi yang berpengalaman, berprestasi, dan pakar di bidangnya"
+  },
+
+  "services": {
+    "hero-title": "Kami akan dengan senang hati membantu Anda sesuai dengan kebutuhan Anda. Dengan keahlian kami, bisnis Anda dapat tumbuh dan meningkat lebih cepat.",
+    "description": "Kami menawarkan berbagai produk dan layanan yang komprehensif untuk memenuhi kebutuhan industri telekomunikasi saat bisnis I-Solution kami berkembang.",
+    "nro-hero-title": "I-Solution memberikan solusi end to end dalam industri telekomunikasi untuk mengembangkan infrastruktur jaringan Anda.",
+    "manage-service-hero-title": "Kami dapat menyediakan berbagai layanan Kelola seperti Pusat Kontak termasuk tenaga kerja, lokasi, stasiun kerja, dan aplikasi untuk mendukung bisnis Anda.",
+    "assembly-hero-title": "Kami menawarkan berbagai produk dan layanan yang komprehensif untuk memenuhi kebutuhan Telekomunikasi & Multimedia.",
+    "other-hero-title": "Dengan keahlian kami dalam Infrastruktur Jaringan, kami dapat menyediakan Bahan dan Peralatan Jaringan."
+  },
+
+  "career": {
+    "hero-title": "Selamat datang di #insideisolution.",
+    "hero-subtitle": "Bergabunglah dengan kami dan jadilah bagian dari I-Teams",
+    "hero-desc": "Bagikan suara dan kisah unik kami bersama di I-Solution",
+    "about-title": "Tentang I-Solution",
+    "about-desc": "Melalui semangat kolaborasi dan inovasi, I-Solution memberikan peluang bagi setiap karyawan untuk tumbuh dan mengembangkan, mengeksplorasi, dan mempelajari hal-hal baru di setiap langkah.",
+    "icci-title-header": "Intip Budaya Kita",
+    "icci-desc": [
+      "Memprioritaskan profesionalisme, keterbukaan, tanggung jawab, dan etika sebagai pedoman kinerja secara konsisten.",
+      "Menyelaraskan keanekaragaman sebagai kekuatan untuk mencapai tujuan bersama.",
+      "Membangun dan memelihara hubungan dengan pelanggan dan berusaha untuk memahami kebutuhan mereka, dan memberikan solusi yang dapat memenuhi harapan pelanggan.",
+      "Keberanian untuk mencari cara baru, lebih efisien dan lebih efektif untuk mencapai tujuan."
+    ],
+    "joinus-title-header": "Berkarir Bersama Kami",
+    "joinus-title-header-desc": "Bagi anda yang mencari pengalaman karier baru, I-Solution menyediakan 3 jenis lowongan: lulusan baru, profesional, dan magang.",
+    "joinus-freshgraduate-title": "Lulusan Baru",
+    "joinus-freshgraduate-desc": "Bagi anda semua lulusan SMK atau SMA serta lulusan sarjana yang sedang terjun dalam tantangan karir, inilah momen Anda!.",
+    "joinus-professional-title": "Profesional",
+    "joinus-professional-desc": "Bagi anda yang sudah memiliki pengalaman di bidang tertentu dan ingin mengembangkan diri lebih jauh lagi, yang ini untukmu.",
+    "joinus-internship-title": "Magang",
+    "joinus-internship-desc": "Bagi anda yang merupakan lulusan SMK atau SMA, mahasiswa tingkat akhir, dan lulusan perguruan tinggi. Program magang ini sangat cocok untuk anda.",
+    "our-inside-title": "Bagian Dalam Kami",
+    "our-inside-desc": "Kami memiliki misi pribadi ketika kami sendirian, tetapi ketika kami bersama di I-Solution, kami mencoba untuk menyatukan apa tujuan kami. Cari tahu lebih lanjut tentang cara kerja kami dan apa yang kami lakukan di I-Solution.",
+    "testimonial-title-header": "Dengarkan dari Mereka tentang I-Solution",
+    "testimonial-desc": "Di I-Solution aku mendapatkan kesempatan untuk memegang project design di employer branding, skill aku juga bertambah karena aku menemukan berbagai tantangan untuk memenuhi kebutuhan design event dan social media. Kaka-kaka nya juga selalu support dan sangat menerima masukan dari anak magang.",
+    "our-program-title-header": "Program Kami"
+  },
+
+  "contact": {
+    "hero-title": "Hubungi kami sekarang! Untuk mendapatkan layanan terbaik",
+    "hero-subtitle": "Kami akan dengan senang hati membantu anda sesuai dengan kebutuhan anda."
+  },
+
+  "form": {
+    "name": "Nama",
+    "phone": "Nomor telepon",
+    "message": "Pesan"
+  },
+
+  "palaceholder": {
+    "type-here": "Ketik di sini"
+  },
+
+  "button": {
+    "contact-us": "Hubungi kami",
+    "join-us": "Bergabung dengan kami",
+    "see-more": "Lihat lebih banyak",
+    "send": "Kirim"
+  }
+}

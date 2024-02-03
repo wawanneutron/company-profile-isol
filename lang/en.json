@@ -1,0 +1,123 @@
+{
+  "landing": {
+    "hero-title": "We Provide Services With Values",
+    "hero-subtitle": "We will be very happy to help you according to your needs. With our expertise, your business can grow and scale up faster.",
+    "about-title": "About Us",
+    "about-subtitle": "Established at September 2019, we began our business with Labor Supply and Manage Services. Now we are focusing on Network Infrastructure with more than 1,500 projects and striving to deliver the best services to our clients including CPE Assembly with more than 75,000 units and Manage Services in Contact Center and Sales.",
+    "service-header-title": "Our Services",
+    "service-focus-title": "What We Focus?",
+    "service-title": [
+      "Network Infrastructures",
+      "Manage Services",
+      "Assembly Factory",
+      "Other Services"
+    ],
+    "service-about": [
+      "I-Solution provides end to end solution in telecommunication industries to develop your network infrastructure.",
+
+      "We can provide various Manage Services such as Contact Center including manpower, premises, workstation, and application to support your business.",
+
+      "We offer a comprehensive range of products and services to fulfill the needs of Telecommunication & Multimedia.",
+
+      "With our expertise in Network Infrastructure we can provide Network Material and Equipment:"
+    ],
+    "service-desc": [
+      "Fiber optic network (FTTx) with various of services include Engineering & Construction (New Roll Out), Network Maintenance & Repair, and Home Connect (Residential and Multi Dwelling Unit).",
+
+      "Contact Center, Tele-sales, Direct Sales, Information Technology, and Other Key Function.",
+
+      "Customer Premise Equipment (CPE) such Set Top Box (STB), Cable Modem, Optical Network Terminal (ONT).",
+
+      "FTTx Poles, Passive Materials, Optical Distribution Network (ODN)."
+    ],
+
+    "location-header-title": "Our Location",
+    "location-alert-map": "Click pin location to show detail map",
+    "gallery-header-title": "Galleries",
+    "tagline-quote": "Innovative Solutions to Your Business"
+  },
+
+  "about": {
+    "profile-hero-title": "Vision, Mission, and Company Value",
+    "profile-hero-subtitle": "We will be very happy to help you according to your needs. With our expertise, your business can grow and scale up faster.",
+    "profile-visi-misi-title-header": "Vision and Mission",
+    "profile-vision-title": "Our Vision",
+    "profile-vision-desc": "The best manage service provider",
+    "profile-mision-title": "Our Mission",
+    "profile-mision-desc": "Partnering with clients to reach their visions",
+    "profile-company-title-header": "Company Proposition",
+    "profile-company-title": [
+      "Peace Of Mind",
+      "Trusted Partner",
+      "Achieve Your Dreams and Work",
+      "Continuously Improving"
+    ],
+    "profile-company-desc": [
+      "Our employees/service will do the right things straight from the first day",
+      "Respecting and honoring rules, and regulations with an integrity mindset",
+      "Growth and always support the Customers Business",
+      "Always find better ways to deliver and achieve the result"
+    ],
+    "management-hero-title": "Management I-Solution",
+    "management-hero-subtitle": "Commissioners and Directors who are experienced, accomplished and experts in their fields"
+  },
+
+  "services": {
+    "hero-title": "We will be very happy to help you according to your needs. With our expertise, your business can grow and scale up faster.",
+    "description": "We offer a comprehensive range of products and services to fulfill the needs of telecommunication industries as our I-Solution business expands.",
+    "nro-hero-title": "I-Solution provides end to end solution in telecommunication industries to develop your network infrastructure.",
+    "manage-service-hero-title": "We can provide various Manage Services such as Contact Center including manpower, premises, workstation, and  application to support your business.",
+    "assembly-hero-title": "We offer a comprehensive range of products and services to fulfill the needs of Telecommunication & Multimedia.",
+    "other-hero-title": "With our expertise in Network Infrastructure we can provide Network Material and Equipment."
+  },
+
+  "career": {
+    "hero-title": "Welcome to #insideisolution.",
+    "hero-subtitle": "Join us & become part of the I-Teams",
+    "hero-desc": "Share our voice and unique story together at I-Solution",
+    "about-title": "About I-Solution",
+    "about-desc": "Through the spirit of collaboration and innovation, I-Solution provides opportunities for every employee to grow and develop, explore and learn new things at every step.",
+    "icci-title-header": "Take a Peek into Our Culture",
+    "icci-desc": [
+      "Prioritize professionalism, openness, responsibility and ethics as performance guidelines consistently.",
+      "Aligning diversity as a strength to achieve common goals.",
+      "Build and maintain relationships with customers and strive to understand their needs, and provide solutions that can meet customer expectations.",
+      "Courage to look for new, more efficient and more effective ways to achieve goals."
+    ],
+    "joinus-title-header": "Career With Us",
+    "joinus-title-header-desc": "For those of you who are looking for new career experiences, I-Solution provides 3 types of vacancies: Fresh Graduate, Professional and Internship.",
+    "joinus-freshgraduate-title": "Fresh Graduate",
+    "joinus-freshgraduate-desc": "For all of you vocational or senior high school graduate and bachelor's graduate diving into the career challenge, this is your moment!.",
+    "joinus-professional-title": "Professional",
+    "joinus-professional-desc": "For those of you who already have experience in a certain field and want to develop yourself further. This one's for you.",
+    "joinus-internship-title": "Internship",
+    "joinus-internship-desc": "For those of you who are high school/vocational, final year student, and college graduates. This internship program is totally vibes for you.",
+    "our-inside-title": "Our Inside",
+    "our-inside-desc": "We have personal missions when we are alone, but when we are together at I-Solution, we try to unite what is our goal. Find out more about how we work and what we do at I-Solution.",
+    "testimonial-title-header": "Hear from Them about I-Solution",
+    "testimonial-desc": "At I-Solution I got the opportunity to hold design projects in employer branding, my skills also increased because I found various challenges to meet event and social media design needs. His older siblings are also always supportive and really accept input from interns.",
+    "our-program-title-header": "Our Program"
+  },
+
+  "contact": {
+    "hero-title": "Contact Us Now! To Get Best Service",
+    "hero-subtitle": "We will be very happy to help you according to your needs. With our expertise, your business can grow and scale up faster."
+  },
+
+  "form": {
+    "name": "Name",
+    "phone": "Phone Number",
+    "message": "Message"
+  },
+
+  "palaceholder": {
+    "type-here": "Type Here"
+  },
+
+  "button": {
+    "contact-us": "Contact Us",
+    "join-us": "Join Us",
+    "see-more": "See More",
+    "send": "Send"
+  }
+}

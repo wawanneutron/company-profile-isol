@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: isolution-app
+  name: fe-company-profile-deployment
+  labels:
+    app: fe-company-profile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fe-company-profile
+      env: prod
+      checks: passed
+  template:
+    metadata:
+      labels:
+        app: fe-company-profile
+        env: prod
+        checks: passed
+    spec:
+      containers:
+      - name: fe-company-profile
+        image: ecr_image
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 250m
+        env:
+        - name: API_URL
+          value: "https://api.youarestellar.co.id"
+        - name: WEB_URL
+          value: "https://growth.youarestellar.co.id"
+        - name: HOST
+          value: "0.0.0.0"
+        - name: PORT
+          value: "3000"
+        - name: NODE_ENV
+          value: "production"

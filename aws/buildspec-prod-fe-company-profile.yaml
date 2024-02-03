@@ -1,0 +1,85 @@
+version: 0.2
+
+env:
+  git-credential-helper: yes
+  parameter-store:
+    PROD_ACCESS_KEY: "PROD_ACCESS_KEY"
+    PROD_SECRET_KEY: "PROD_SECRET_KEY"
+    GITHUB_TOKEN: "GITHUB_TOKEN"
+
+phases:
+  install:
+    commands:
+      ## Set parameter
+      - REGION=ap-southeast-1
+      - AWS_ACCOUNTID_PROD=002862343577
+      - REPO_NAME=fe-company-profile
+      - URL_GIT=github.com/i-Solution/${REPO_NAME}
+      - BRANCH_GIT=testing
+      - BRANCH_TARGET=main
+      - USER_GIT=YouAreStellar
+      - EMAIL_GIT=youarestellar.cs@i-solution.co.id
+      - ECR_NAME_PROD=fe-company-profile
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)
+      - IMAGE_TAG=${COMMIT_HASH:=latest} #-$CODEBUILD_BUILD_NUMBER
+      - EKS_PROD_NAME=prod-cluster
+      - DEPLOYMENT_PROD_NAME=prod-fe-company-profile-deployment.yaml
+      - REPOSITORY_URI_PROD=${AWS_ACCOUNTID_PROD}.dkr.ecr.${REGION}.amazonaws.com/${ECR_NAME_PROD}
+      ## Install kubectl
+      - echo Installing app dependencies...
+      - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+      - chmod +x ./kubectl
+      - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+      - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+      - source ~/.bashrc
+      
+  pre_build:
+    commands:
+      ## copying environment
+      - cp -rf aws/env-prod-$ECR_NAME_PROD .env
+      ## Setup AWS CLI for production account  
+      - aws configure set region ${REGION}
+      - aws configure set aws_access_key_id $PROD_ACCESS_KEY
+      - aws configure set aws_secret_access_key $PROD_SECRET_KEY
+      - aws sts get-caller-identity
+      ## Login to ECR Prod
+      - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNTID_PROD}.dkr.ecr.${REGION}.amazonaws.com
+      
+  build:
+    commands:
+      - ls -alh
+      - echo Building docker image…
+      - docker build -t $REPOSITORY_URI_PROD:latest .
+      - docker tag $REPOSITORY_URI_PROD:latest $REPOSITORY_URI_PROD:$IMAGE_TAG
+      
+  post_build:
+    commands:
+      ## Push Image to ECR Production
+      - docker push $REPOSITORY_URI_PROD:$IMAGE_TAG
+      - docker push $REPOSITORY_URI_PROD:latest
+      ## Setup kubectl 
+      - aws eks --region ${REGION} update-kubeconfig --name ${EKS_PROD_NAME}
+      - kubectl get pods -n kube-system
+      - sed -i 's|ecr_image|'"$REPOSITORY_URI_PROD"':'"$IMAGE_TAG"'|g' aws/kube-manifest/$DEPLOYMENT_PROD_NAME
+      - echo Rollout new version
+      - kubectl apply -f aws/kube-manifest/$DEPLOYMENT_PROD_NAME    
+      ## Merge into master/main branch
+      - git clone https://$USER_GIT:$GITHUB_TOKEN@$URL_GIT
+      - cd $REPO_NAME
+      - git checkout $BRANCH_GIT 
+      - git reset --hard $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - git remote set-url origin https://$USER_GIT:$GITHUB_TOKEN@$URL_GIT
+      - git config --global user.email "$EMAIL_GIT"
+      - git config --global user.name "$USER_GIT"
+      - git log -1 --format="%H"
+      - git status
+      - git remote -v
+      - git checkout $BRANCH_TARGET
+      - git status
+      - git merge $BRANCH_GIT
+      #- git cherry-pick $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - git reset --hard $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - git pull --rebase origin $BRANCH_TARGET
+      - git status
+      - git push origin $BRANCH_TARGET
+      - pwd

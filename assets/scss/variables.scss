@@ -1,0 +1,70 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+
+$body-font-family: 'Poppins', sans-serif;
+$border-radius-root: 2px;
+$icon-size: 20px !default;
+
+// Rounded
+$rounded: (
+  0: 0,
+  'sm': $border-radius-root,
+  null: $border-radius-root * 2,
+  'lg': $border-radius-root * 3,
+  'xl': $border-radius-root * 4,
+  'xxl': $border-radius-root * 10,
+  'pill': 9999px,
+  'circle': 50%
+);
+
+// Textfield
+$material-light: (
+  'text-fields': (
+    'outlined': rgb(224 224 224)
+  )
+);
+
+$text-field-border-radius: $border-radius-root * 3;
+$text-field-filled-full-width-outlined-slot-min-height: 40px !default;
+$text-field-enclosed-prepend-append-margin-top: 9px;
+$text-field-outlined-fieldset-border: 1px solid currentColor;
+$text-field-outlined-append-prepend-outer-margin-top: 0px;
+
+// Textfield solo
+$text-field-solo-control-min-height: 38px !default;
+
+// Button
+$btn-border-radius: 8px;
+$btn-letter-spacing: 0px;
+$btn-sizes: (
+  'x-small': 34,
+  'small': 38,
+  'default': 38,
+  'large': 56,
+  'x-large': 70
+);
+
+// Pagination
+$pagination-border-radius: $border-radius-root * 4;
+$pagination-item-font-size: 14px;
+
+// Chip
+$chip-label-border-radius: $border-radius-root * 2;
+$icon-sizes: (
+  'small': (
+    'font-size': 14,
+    'height': 38
+  )
+);
+
+// Snackbar
+$snackbar-border-radius: $border-radius-root * 3;
+$snackbar-content-letter-spacing: 0px;
+
+// Datatables
+// $data-table-border-radius: $border-radius-root * 4;
+
+$skeleton-loader-item-avatar-width: 76px;
+$skeleton-loader-item-avatar-height: 76px;

@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dev
+  name: fe-company-profile-deployment
+  labels:
+    app: fe-company-profile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fe-company-profile
+      env: dev
+      checks: passed
+  template:
+    metadata:
+      labels:
+        app: fe-company-profile
+        env: dev
+        checks: passed
+    spec:
+      containers:
+      - name: fe-company-profile
+        image: ecr_image
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 250m
+          requests:
+            cpu: 250m
+        env:
+        - name: HOST
+          value: "0.0.0.0"
+        - name: PORT
+          value: "3000"

@@ -1,0 +1,65 @@
+version: 0.2
+
+env:
+  git-credential-helper: yes
+  parameter-store:
+    DEV_ACCESS_KEY: "DEV_ACCESS_KEY"
+    DEV_SECRET_KEY: "DEV_SECRET_KEY"
+    GITHUB_TOKEN: "GITHUB_TOKEN"
+    
+phases:
+  install:
+    commands:
+      ## Set parameter
+      - REGION=ap-southeast-1
+      - AWS_ACCOUNTID=661579603425
+      - ECR_NAME=fe-company-profile
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)
+      - IMAGE_TAG=${COMMIT_HASH:=latest} #-$CODEBUILD_BUILD_NUMBER
+      - EKS_NAME=isol-dev-cluster
+      - DEPLOYMENT_NAME=dev-fe-company-profile-deployment.yaml
+      - REPOSITORY_URI=${AWS_ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com/${ECR_NAME}
+      ## Install Kubectl
+      - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+      - chmod +x ./kubectl
+      - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+      - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+      - source ~/.bashrc
+
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      ## Setup AWS CLI for dev account
+      - aws configure set region ${REGION}
+      - aws configure set aws_access_key_id $DEV_ACCESS_KEY
+      - aws configure set aws_secret_access_key $DEV_SECRET_KEY
+      - aws sts get-caller-identity
+      ## Setup ECR Login
+      - echo Logging to AWS ECR…
+      - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNTID}.dkr.ecr.${REGION}.amazonaws.com
+      - echo Logging in to Amazon EKS...
+      ## Update kubectl credential
+      - aws eks --region ${REGION} update-kubeconfig --name ${EKS_NAME}
+      - echo Testing k8s cluster connection
+      - kubectl get pods -n kube-system
+      ## Copying Environment
+      - cp -rf aws/env-dev-$ECR_NAME .env
+
+  build: # Build Docker image and tag it with the commit sha
+    commands:
+      - ls -alh
+      - echo Building docker image…
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+  post_build: # Push the Docker image to the ECR
+    commands:
+      - echo Pushing ECR…
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      ## Search and replace character ecr_image in kube config file to ecr image name and tag
+      - sed -i 's|ecr_image|'"$REPOSITORY_URI"':'"$IMAGE_TAG"'|g' aws/kube-manifest/$DEPLOYMENT_NAME
+      ## Apply new deployment config
+      - echo Rollout new version
+      - kubectl apply -f aws/kube-manifest/$DEPLOYMENT_NAME
+      - cat .env

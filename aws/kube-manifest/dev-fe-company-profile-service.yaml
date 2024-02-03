@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fe-company-profile-service
+  namespace: dev
+spec:
+  type: NodePort
+  selector:
+    app: fe-company-profile
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
