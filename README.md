@@ -1,6 +1,6 @@
 # company-profile
 
-live demo [click link](https://dev-isol.netlify.app/).
+live demo click link [https://dev-isol.netlify.app/](https://dev-isol.netlify.app/).
 
 ## Build Setup
 
