@@ -1,5 +1,7 @@
 # company-profile
 
+live demo [click link](https://dev-isol.netlify.app/).
+
 ## Build Setup
 
 ```bash
